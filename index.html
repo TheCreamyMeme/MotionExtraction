@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Motion Extraction</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="MEstyles.css">
+</head>
+<body class="page-container">
+<div class="content-wrapper">
+  <h2 class="w3-red">Motion Extraction:</h2>
+</div>
+<div class="content">
+  <p>You can extract motion by duplicating a video and overlaying them, inverting the colors (you can also adjust them to your liking), apply some blending such as opacity or mix-blend-mode, then finally having a time delay. All the pixels that have changed will be highlighted while all the pixels that have stayed the same will be dark. Changing the blending mode, opacity settings, and time difference will all affect the output.</p>
+</div>
+<div class="slidecontainer">
+  <label for="slider">Example Slider:</label>
+  <input type="range" class="slider" id="slider" min="0" max="60" value="0" oninput="rangeValue.innerText = this.value"><p id="rangeValue">0</p>
+</div>
+<div class="buttcontainer">
+    <div class="toggle" onclick="toggle()">
+        <div class="circle"></div>
+    </div>
+    <span class="text">FF</span>
+</div>
+<div class="video-container">
+    
+    <video id="v" class="vid3" height="1080" width="1920" autoplay muted loop>
+    <source id='mp4'
+    src="ParkingRain.mp4#t=0"
+    type='video/mp4'>
+    <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+
+    <video id="overlay1" class="vid2" height="1080" width="1920" autoplay muted loop>
+    <source id='mp4'
+    src="ParkingRain.mp4#t=0.1"
+    type='video/mp4'>
+    <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+
+    <video id="overlay2" class="vid1" height="1080" width="1920" autoplay muted loop>
+    <source id='mp4'
+    src="ParkingRain.mp4#t=0.2"
+    type='video/mp4'>
+    <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+  </div>
+<div class="footer">
+  <footer>This is absolutely wild, unbelievable what you can make.</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
